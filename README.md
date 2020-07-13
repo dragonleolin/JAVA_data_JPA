@@ -1,6 +1,8 @@
 # data_JPA_HOMEWORK
 JAVA JPA 資料庫CRUD，以API方式製作
 
+啟動serve: 到 DataJpaHomeworkApplication -> 點選右鍵 -> Run As -> Spring Boot App
+
 使用方式: 可以把資料表先放到資料庫中，或是沒有放對應的表，資料庫會自動新增。此API要先使用新增訂單細項才可以用新增訂單，訂單排序需要跟著訂單的id
 
 資料表的放置位置: JAVA_data_JPA/src/main/resources/
