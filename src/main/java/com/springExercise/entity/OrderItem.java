@@ -22,23 +22,24 @@ public class OrderItem implements Serializable {
 	@Column(nullable=true)
 	private String productName;
 	@Column(nullable=true)
-	private int price;
+	private Integer price;
 	@Column(nullable=true)
-	private int qty;
+	private Integer qty;
+	
 	@Column(nullable=true)
-	private int order_id;
+	private Integer order_id;
 	
 //	@OneToOne
 //	@JoinColumn(name="product_id",referencedColumnName="orderId")
 	@Column(nullable=true)
-	private int product_id;
+	private Integer product_id;
 	
 	
 	
-	public int getProduct_id() {
+	public Integer getProduct_id() {
 		return product_id;
 	}
-	public void setProduct_id(int product_id) {
+	public void setProduct_id(Integer product_id) {
 		this.product_id = product_id;
 	}
 	
@@ -53,22 +54,22 @@ public class OrderItem implements Serializable {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public int getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	public int getQty() {
+	public Integer getQty() {
 		return qty;
 	}
-	public void setQty(int qty) {
+	public void setQty(Integer qty) {
 		this.qty = qty;
 	}
-	public int getOrder_id() {
+	public Integer getOrder_id() {
 		return order_id;
 	}
-	public void setOrder_id(int order_id) {
+	public void setOrder_id(Integer order_id) {
 		this.order_id = order_id;
 	}
 	
