@@ -1,6 +1,7 @@
 package com.springExercise.entity;
 
 import java.io.Serializable;
+import java.sql.Blob;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,20 +10,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table (name="product")
+@Table(name = "product")
 public class Product implements Serializable {
-	@Id //這是一個主鍵
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //自增主鍵
+	@Id // 這是一個主鍵
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // 自增主鍵
 	private Integer id;
-	
+
 	@Column
 	private String name;
-	
+
 	@Column
 	private String location;
-	
+
 	@Column
 	private String descript;
 	@Column
@@ -30,11 +30,35 @@ public class Product implements Serializable {
 	@Column
 	private String unit;
 
+	@Column(name="imgPath")
+	private String imgPath;
+	
+	
+	
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", location=" + location + ", descript=" + descript + ", price=" + price
-				+ ", unit=" + unit + "]";
+		return "Product [id=" + id + ", name=" + name + ", location=" + location + ", descript=" + descript + ", price="
+				+ price + ", unit=" + unit + ", imgPath=" + imgPath + "]";
 	}
+
+	public String getImgPath() {
+		return imgPath;
+	}
+
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
 
 	public Integer getPrice() {
 		return price;
@@ -76,9 +100,4 @@ public class Product implements Serializable {
 		this.descript = descript;
 	}
 
-	
-	
-	
-	
-	
 }
